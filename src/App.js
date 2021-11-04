@@ -7,18 +7,18 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const user = 'Mia';
 
-  const Login = () => {
+  const login = () => {
     setIsLoggedIn(true);
   }
 
-  const Logout = () => {
+  const logout = () => {  
     setIsLoggedIn(false);
   }
 
   return (
     <div className="App">
       <div className="App-header">
-        <RestrictedPage isLogged user={user}  />
+        <RestrictedPage isLogged={isLoggedIn} user={user} login={login} logout={logout}  />
       </div>
     </div>
   );
